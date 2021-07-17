@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt update && apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release nano \
+RUN apt update && apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release nano zip tree golang \
     && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
     && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null \
     && echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list \
