@@ -7,11 +7,11 @@
 ### Windaub
 
 ```shell
-docker run --rm --volume "%HOMEDRIVE%\%HOMEPATH%:/root" -it vr00mm/vr00mm:tools-box bash
+docker run --rm --volume "%HOMEDRIVE%\%HOMEPATH%:/root" --volume /var/run/docker.sock:/var/run/docker.sock --privileged -it vr00mm/vr00mm:tools-box bash
 ```
 
 ### Linux
 
 ```bash
-docker run --rm --volume "${HOME}:/root" -it vr00mm/vr00mm:tools-box bash
+docker run --rm --volume "${HOME}:/root" --volume /var/run/docker.sock:/var/run/docker.sock --privileged -it vr00mm/vr00mm:tools-box bash
 ```
