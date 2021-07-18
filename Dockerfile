@@ -14,4 +14,4 @@ RUN apt update && apt-get install -y apt-transport-https ca-certificates curl gn
     && curl -sSL --output jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 && chmod +x jq && mv jq /usr/local/bin/jq \
     && curl -sSL --output yq https://github.com/mikefarah/yq/releases/download/3.4.1/yq_linux_amd64 && chmod +x yq && mv yq /usr/local/bin/yq \
     && apt-get clean autoclean && apt-get autoremove --yes && rm -rf /var/lib/{apt,dpkg,cache,log}/ \
-    && go get norwoodj/helm-docs && go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
+    && go get github.com/norwoodj/helm-docs/cmd/helm-docs && go get github.com/golangci/golangci-lint/cmd/golangci-lint@v1.41.1
